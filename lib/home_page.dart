@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bot.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +25,38 @@ class HomePage extends StatelessWidget {
             Container(height: 80),
             SizedBox(
               height: 55,
-              width: 220,
+              width: 250,
+              child: MaterialButton(
+                color: Colors.blueGrey,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ChatBot()));
+                },
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      " MobileCyD is Here  ",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Icon(
+                      Icons.phone_android_rounded,
+                      size: 30.0,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Container(height: 25),
+            SizedBox(
+              height: 55,
+              width: 250,
               child: MaterialButton(
                 color: Colors.blueGrey,
                 onPressed: () {},
@@ -35,14 +67,14 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      " ChatBot is Here ",
+                      " WebCyD is Here  ",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
                       ),
                     ),
                     Icon(
-                      Icons.rocket_launch_rounded,
+                      Icons.laptop_mac_rounded,
                       size: 30.0,
                     )
                   ],
